@@ -1,34 +1,146 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## React.js プロジェクト作成
 
-## Getting Started
+### Node.js
 
-First, run the development server:
+- バージョン確認
+  ```sh
+  $ nodebrew -v
+  nodebrew 1.2.0
+  $ node -v
+  v16.14.2
+  $ yarn -v
+  1.22.18
+  ```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Next.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ターミナルから yarn で Next.js プロジェクトを作成
+この時、nextjs-mantine プロジェクトフォルダが作成されて環境構築される
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- create-next-app
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  ```sh
+  $ npx create-next-app nextjs-mantine --ts
+  ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Prettier & Tailwind CSS
 
-## Learn More
+プロジェクトフォルダを VSCode で開く
 
-To learn more about Next.js, take a look at the following resources:
+- .prettierrc
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```sh
+  $ touch .prettierrc
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  ```js
+  {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 80
+  }
+  ```
 
-## Deploy on Vercel
+- Tailwind CSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```sh
+  $ yarn add -D tailwindcss postcss autoprefixer
+  $ yarn add -D prettier prettier-plugin-tailwindcss
+  $ npx tailwindcss init -p
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- tailwnd.config.js
+  Tailwind CSS 3.0 を利用するため content の設定変更
+  Mantine UI を共存させるため plugins の設定変更
+
+  ```js
+  module.exports = {
+    content: [
+      './pages/**/*.{js,ts,jsx,tsx}',
+      './components/**/*.{js,ts,jsx,tsx}',
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+    corePlugins: {
+      preflight: false,
+    },
+  }
+  ```
+
+- styles/globals.css
+
+  ```
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  ```
+
+### ライブラリ追加
+
+- Mantine UI / Supabase / React Query / day.js / yup / axios / zustand
+
+  ```sh
+  yarn add dayjs @mantine/core @mantine/hooks @mantine/form @mantine/dates @mantine/next tabler-icons-react
+  yarn add @supabase/supabase-js react-query@4.0.0-beta.10 @heroicons/react date-fns yup axios zustand
+  <!-- yarn add @mantine/notifications -->
+  ```
+
+- .env.local
+
+  ```sh
+  $ touch .env.local
+  ```
+
+  ```
+  NEXT_PUBLIC_SUPABASE_URL=
+  NEXT_PUBLIC_SUPABASE_ANON_KEY=
+  ```
+
+- utils/supabase.ts
+
+  ```sh
+  $ mkdir utils
+  $ touch utils/supabase.ts
+  ```
+
+  ```ts
+  import { createClient } from '@supabase/supabase-js'
+
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+
+  export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  ```
+
+- 開発サーバー起動
+
+  ```
+  $ yarn dev
+  ```
+
+### GitHub
+
+- initial commit
+  ```
+  $ git commit -m "initial commit"
+  $ git@github.com:hfujiyos/nextjs-mantine.git
+  $ git push -u origin main
+  ```
+
+## ディレクトリ構成
+
+- docdev
+- styles
+  - globals.css
+- utils
+  - supabase.ts
+- .env.local
+- .prettierrc
+- package.json
+- README.md
+- tailwind.config.js
