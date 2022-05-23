@@ -1,4 +1,4 @@
-## React.js プロジェクト作成
+## Next.js プロジェクト作成
 
 ### Node.js
 
@@ -14,9 +14,6 @@
 
 ### Next.js
 
-ターミナルから yarn で Next.js プロジェクトを作成
-この時、nextjs-mantine プロジェクトフォルダが作成されて環境構築される
-
 - create-next-app
 
   ```sh
@@ -25,7 +22,11 @@
 
 ### Prettier & Tailwind CSS
 
-プロジェクトフォルダを VSCode で開く
+- プロジェクトディレクトリ移動
+
+  ```sh
+  $ cd nextjs-mantine
+  ```
 
 - .prettierrc
 
@@ -128,7 +129,7 @@
 - initial commit
   ```
   $ git commit -m "initial commit"
-  $ git@github.com:hfujiyos/nextjs-mantine.git
+  $ git remote add origin git@github.com:hfujiyos/nextjs-mantine.git
   $ git push -u origin main
   ```
 
@@ -144,3 +145,10 @@
 - package.json
 - README.md
 - tailwind.config.js
+
+## 参考文献
+
+- [Mantine UI ｜ Usage with Next.js](https://mantine.dev/theming/next/)
+- [Mantine UI ｜ default theme](https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts)
+- [Mantine UI ｜ Shared props](https://mantine.dev/pages/basics/#shared-props)
+- [Tailwind CSS ｜ Cheat Sheet](https://nerdcave.com/tailwind-cheat-sheet)

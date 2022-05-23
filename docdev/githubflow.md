@@ -1,4 +1,4 @@
-## GitHubFlow
+# GitHubFlow
 
 - スクラムマスターにてプロジェクトを作成
 
