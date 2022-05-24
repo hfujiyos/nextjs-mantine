@@ -36,7 +36,7 @@
   ```
   開発時にはコミット
   $ git add
-  $ git commit
+  $ git commit -m "Fix login logic"
 
   featureブランチをリモートリポジトリへプッシュ
   $ git push origin HEAD

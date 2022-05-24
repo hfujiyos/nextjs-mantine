@@ -135,7 +135,13 @@
 
 ## ディレクトリ構成
 
+- components
+  - Layout.tsx
 - docdev
+- pages
+  - \_app.tsx
+  - \_document.tsx
+  - button.tsx
 - styles
   - globals.css
 - utils
