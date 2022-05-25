@@ -43,6 +43,17 @@ Maintine UI いずれの UI でも使用できる共通 Props を確認します
   }
   ```
 
+- Props or Styles API
+  Props あるいは CSS でスタイリングする。下記はいずれも 16px のマージントップが設定される
+  ```js
+  //Props mt
+  <Button mt={16}>Click</Button>
+  //Props mt & Theme md
+  <Button mt="md">Click</Button>
+  //Styles API classname & Tailwind CSS
+  <Button classname="mt-4"></Button>
+  ```
+
 ### [Button props](https://mantine.dev/core/button/?t=props)
 
 ボタン Props の使用可能データ型
@@ -58,13 +69,13 @@ Maintine UI いずれの UI でも使用できる共通 Props を確認します
 
 ### [GitHub default theme](https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts)
 
-UI フレームワークの中でどんな処理をしているかは、GitHub のコードを見て確認します
-GitHub を確認すると、Props で radius に"sm"を渡す時、実際に何 px に対応しているか確認できます
-"sm"を設定した場合は 4px であることを確認できます
+UI フレームワークの中でどんな処理をしているかは、GitHub のコードを見て確認します。
+
+GitHub を確認すると、Props で radius に"sm"を渡す時、実際に何 px に対応しているか確認できます。"sm"を設定した場合は 4px であることを確認できます
 
 - GitHub default theme | radius
 
-  ```
+  ```js
       radius: {
         xs: 2,
         sm: 4,

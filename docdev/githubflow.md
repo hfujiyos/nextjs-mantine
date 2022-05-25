@@ -16,7 +16,7 @@
 
 - 開発者にて、ローカルリポジトリで main ブランチの最新のソースをプル
 
-  ```
+  ```sh
   mainブランチに切替
   $ git checkout main
 
@@ -26,14 +26,14 @@
 
 - 開発者にて、イシュー用の新しいブランチを切る
 
-  ```
+  ```sh
   featureブランチを新規作成してブランチ切替
   $ git checkout -b feature/fixLoginLogic
   ```
 
 - 開発者にて、コーディング / コミット / プッシュ
 
-  ```
+  ```sh
   開発時にはコミット
   $ git add
   $ git commit -m "Fix login logic"
@@ -55,7 +55,7 @@
 
 - 開発者にて、ローカルリポジトリで main ブランチの最新のソースをプル
 
-  ```
+  ```sh
   mainブランチに切替
   $ git checkout main
 
@@ -65,7 +65,7 @@
 
 - 開発者にて、ローカルリポジトリで不要ブランチ削除
 
-  ```
+  ```sh
   現在のブランチがmainであるか確認
   $ git branch
     feature/funcE
