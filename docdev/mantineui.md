@@ -85,6 +85,64 @@ GitHub を確認すると、Props で radius に"sm"を渡す時、実際に何 
       },
   ```
 
+## Group
+
+### [Group usage](https://mantine.dev/core/group/)
+
+- props:my 横並び → md マージン 16px
+
+  ```js
+  <Group my='md'></Group>
+  ```
+
+- props:my 横並び → md マージン 16px
+- props:position 横整列 → center センタリング
+
+  ```js
+  <Group my='md' position='center'></Group>
+  ```
+
+- props:my 横並び → md マージン 16px
+- props:position 横整列 → apart 等間隔
+
+  ```js
+  <Group my='md' position='apart'></Group>
+  ```
+
+- props:my 横並び → md マージン 16px
+- props:grow 同比率引き伸ばし
+
+  ```js
+  <Group my='md' grow></Group>
+  ```
+
+- props:direction グルーピング方向 → 縦方向に変換
+- props:my 横並び → md マージン 16px
+- props:position 横整列 → right 右寄せ
+
+  ```js
+  <Group direction='column' my='md' position='right'>
+  ```
+
+- props:my 横並び → md マージン 16px
+- props:align 縦整列 → start 上寄せ
+
+  ```js
+  <Group my='md' align='start'>
+  ```
+
+## Center
+
+### [Center usage](https://mantine.dev/core/center/)
+
+- 中央寄せ
+
+  ```js
+  <Center>
+    <Button mt='md'>Click</Button>
+  </Center>
+  ```
+
 ## 参考文献
 
 - [Mantine UI ｜ Usage with Next.js](https://mantine.dev/theming/next/)
