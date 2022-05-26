@@ -3,6 +3,10 @@ import { Group, Button, Center } from '@mantine/core'
 import { ReplyIcon } from '@heroicons/react/solid'
 import { Layout } from '../components/Layout'
 
+/**
+ * Groupﾃﾞﾓｺﾝﾎﾟｰﾈﾝﾄ
+ * @return ｸﾞﾙｰﾌﾟﾃﾞﾓﾋﾞｭｰ
+ */
 const GroupDemo = () => {
   return (
     <Layout title='Group'>
