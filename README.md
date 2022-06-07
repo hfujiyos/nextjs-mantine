@@ -142,8 +142,12 @@
   - \_app.tsx
   - \_document.tsx
   - button.tsx
+- store
+  -
 - styles
   - globals.css
+- types
+  - index.ts
 - utils
   - supabase.ts
 - .env.local
