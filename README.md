@@ -136,14 +136,17 @@
 ## ディレクトリ構成
 
 - components
+  - Auth.tsx
+  - DashBoard.tsx
   - Layout.tsx
 - docdev
 - pages
   - \_app.tsx
   - \_document.tsx
   - button.tsx
+  - index.tsx
 - store
-  -
+  - index.ts
 - styles
   - globals.css
 - types

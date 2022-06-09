@@ -1,36 +1,31 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useEffect } from 'react'
+import { supabase } from '../utils/supabase'
+import useStore from '../store'
+import { Auth } from '../components/Auth'
+import { DashBoard } from '../components/DashBoard'
 
-import { Center, Group } from '@mantine/core'
-import { Layout } from '../components/Layout'
-import Link from 'next/link'
-
+/**
+ * Homeｺﾝﾎﾟｰﾈﾝﾄ
+ * @returns sessionがあればDashBoardｺﾝﾎﾟｰﾈﾝﾄ、sessionがなければAuthｺﾝﾎﾟｰﾈﾝﾄ
+ */
 const Home: NextPage = () => {
-  return (
-    <Center>
-      <div className='flex min-h-screen  justify-center'>
-        <Group my='md' grow>
-          <Link href='/button'>
-            <a className='rounded  bg-gray-500 px-4 py-8 text-white hover:bg-gray-600'>
-              Button Demo
-            </a>
-          </Link>
-          <Link href='/group'>
-            <a className='rounded bg-gray-500 px-4 py-8 text-white hover:bg-gray-600'>
-              Group Demo
-            </a>
-          </Link>
-          <Link href='/grid'>
-            <a className='rounded  bg-gray-500 px-4 py-8 text-white hover:bg-gray-600'>
-              Grid Demo
-            </a>
-          </Link>
-        </Group>
-      </div>
-    </Center>
-  )
+  const session = useStore((state) => state.session)
+  const setSession = useStore((state) => state.setSession)
+
+  /**
+   * ｷｬｯｼｭ最新化関数
+   * @description ﾏｳﾝﾄ時/ﾛｸﾞｲﾝ時/ﾛｸﾞｱｳﾄ時に、supabaseｾｯｼｮﾝを取得してzustandｾｯｼｮﾝに格納
+   */
+  useEffect(() => {
+    setSession(supabase.auth.session())
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+  }, [setSession])
+
+  // ﾋﾞｭｰ分岐
+  return <>{session ? <DashBoard /> : <Auth />}</>
 }
 
 export default Home
