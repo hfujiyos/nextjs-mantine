@@ -1,24 +1,29 @@
 # VSCode
+
 ## ショートカット
-* command + j : ターミナル表示/非表示
-* command + / : コメントアウト/イン
-* command + n : 新規ファイル
-* shift + option + クリック : 複数カーソル
+
+- command + j : ターミナル表示/非表示
+- command + / : コメントアウト/イン
+- command + n : 新規ファイル
+- command + j : 新規ターミナル
+- shift + option + クリック : 複数カーソル
 
 ## 拡張機能
-* Japanese Language Pack for Visual Studio Code｜Microsoft
-* Git Graph｜mhutchie
-* Prettier - Code formatter｜Prettier
-* vscode-icons｜VSCode Icons Team
-* Bracket Pair Colorizer｜CoenraadS【非推奨｜現行VSCode標準搭載となり導入不要】
-* Draw.io Integration｜Henning Dieterichs
-* ES7+ React/Redux/React-Native snippets｜dsznajder
-* Jest｜Orta
+
+- Japanese Language Pack for Visual Studio Code ｜ Microsoft
+- Git Graph ｜ mhutchie
+- Prettier - Code formatter ｜ Prettier
+- vscode-icons ｜ VSCode Icons Team
+- Bracket Pair Colorizer ｜ CoenraadS【非推奨｜現行 VSCode 標準搭載となり導入不要】
+- Draw.io Integration ｜ Henning Dieterichs
+- ES7+ React/Redux/React-Native snippets ｜ dsznajder
+- Jest ｜ Orta
 
 ## settings.json
-VSCodeのメニューバーから、[基本設定] - [設定] にて設定画面を開きます
+
+VSCode のメニューバーから、[基本設定] - [設定] にて設定画面を開きます
 右上のアイコンの[設定 (JSON) を開く]をクリック
-個人設定となるsettings.jsonファイルを設定します
+個人設定となる settings.json ファイルを設定します
 
 ```json
 {

@@ -13,9 +13,9 @@ import { Layout } from '../components/Layout'
 export const DashBoard = () => {
 
   /**
- * ｻｲﾝｱｳﾄ関数
- * @returns supabaseｻｲﾝｱｳﾄ関数実行
- */
+   * ｻｲﾝｱｳﾄ関数
+   * @returns supabaseｻｲﾝｱｳﾄ関数実行
+   */
   const signOut = () => {
     supabase.auth.signOut()
   }
