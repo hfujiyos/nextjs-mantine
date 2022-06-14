@@ -26,8 +26,8 @@ const initialValues: TransferListData = [
 ]
 
 /**
- * ﾏﾙﾁｾﾚｸﾄ関数
- * @returns ﾏﾙﾁｾﾚｸﾄﾋﾞｭｰ
+ * ﾏﾙﾁｾﾚｸﾄ画面ｺﾝﾎﾟｰﾈﾝﾄ
+ * @returns ﾏﾙﾁｾﾚｸﾄ画面ﾋﾞｭｰ
  */
 const MultiSelectDemo = () => {
   const [radioValue, setRadioValue] = useState('react')
@@ -36,7 +36,7 @@ const MultiSelectDemo = () => {
     useState<TransferListData>(initialValues)
   console.log(transferValue)
 
-  // ﾏﾙﾁｾﾚｸﾄﾋﾞｭｰ
+  // ﾏﾙﾁｾﾚｸﾄ画面ﾋﾞｭｰ
   return (
     <Layout title="Multi Select">
       <Container>

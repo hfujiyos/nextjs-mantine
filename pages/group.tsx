@@ -4,8 +4,8 @@ import { ReplyIcon } from '@heroicons/react/solid'
 import { Layout } from '../components/Layout'
 
 /**
- * Groupﾃﾞﾓｺﾝﾎﾟｰﾈﾝﾄ
- * @return ｸﾞﾙｰﾌﾟﾃﾞﾓﾋﾞｭｰ
+ * ｸﾞﾙｰﾌﾟ画面ｺﾝﾎﾟｰﾈﾝﾄ
+ * @return ｸﾞﾙｰﾌﾟ画面ﾋﾞｭｰ
  */
 const GroupDemo = () => {
   return (

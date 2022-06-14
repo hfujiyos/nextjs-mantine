@@ -6,7 +6,7 @@ import { Auth } from '../components/Auth'
 import { DashBoard } from '../components/DashBoard'
 
 /**
- * Homeｺﾝﾎﾟｰﾈﾝﾄ
+ * Home画面ｺﾝﾎﾟｰﾈﾝﾄ
  * @returns sessionがあればDashBoardｺﾝﾎﾟｰﾈﾝﾄ、sessionがなければAuthｺﾝﾎﾟｰﾈﾝﾄ
  */
 const Home: NextPage = () => {

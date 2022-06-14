@@ -4,8 +4,8 @@ import { ReplyIcon } from '@heroicons/react/solid'
 import { Layout } from '../components/Layout'
 
 /**
- * Gridﾃﾞﾓｺﾝﾎﾟｰﾈﾝﾄ
- * @return ｸﾞﾘｯﾄﾞﾃﾞﾓﾋﾞｭｰ
+ * ｸﾞﾘｯﾄﾞ画面ｺﾝﾎﾟｰﾈﾝﾄ
+ * @return ｸﾞﾘｯﾄﾞ画面ﾋﾞｭｰ
  */
 const GridDemo = () => {
   return (

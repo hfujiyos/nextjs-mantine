@@ -5,8 +5,8 @@ import { Layout } from '../components/Layout'
 import { BrandGithub, ThreeDCubeSphere } from 'tabler-icons-react'
 
 /**
- * Buttonﾃﾞﾓｺﾝﾎﾟｰﾈﾝﾄ
- * @return ﾎﾞﾀﾝﾃﾞﾓﾋﾞｭｰ
+ * ﾎﾞﾀﾝ画面ｺﾝﾎﾟｰﾈﾝﾄ
+ * @return ﾎﾞﾀﾝ画面ﾋﾞｭｰ
  */
 const ButtonDemo = () => {
   return (
